@@ -596,22 +596,44 @@ footer {
 }
 
 @media (max-width: 640px) {
+  /* nav más compacto en cel */
   .nav-inner {
     padding-inline: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
+
+  .logo-text-main {
+    font-size: 0.8rem;
+  }
+
+  .logo-text-sub {
+    font-size: 0.65rem;
+  }
+
+  /* ✅ mostrar menú también en celular */
   .nav-links {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    font-size: 0.65rem;
   }
+
   .page {
     padding: 20px 12px 40px;
   }
+
   .gallery-grid {
     column-count: 1;
   }
+
   .section-header {
     flex-direction: column;
     align-items: flex-start;
   }
+
   footer {
     flex-direction: column;
     align-items: flex-start;
