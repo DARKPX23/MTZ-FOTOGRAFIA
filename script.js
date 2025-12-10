@@ -16,7 +16,21 @@ async function createGallery() {
 
   try {
     const response = await fetch("photos.json");
+    if (!response.ok) {
+      throw new Error("No se pudo cargar photos.json");
+    }
+
     const photos = await response.json();
+    console.log("Fotos cargadas desde photos.json:", photos);
+
+    // limpiar primero
+    gallery.innerHTML = "";
+
+    if (!Array.isArray(photos) || photos.length === 0) {
+      gallery.innerHTML =
+        "<p style='color:#888;font-size:0.9rem'>Aún no hay fotos en la galería.</p>";
+      return;
+    }
 
     photos.forEach((photo, index) => {
       const figure = document.createElement("figure");
@@ -28,6 +42,7 @@ async function createGallery() {
       const img = document.createElement("img");
       img.src = `img/${photo.file}`;
       img.alt = photo.title || `Foto ${index + 1}`;
+      img.loading = "lazy";
 
       const overlay = document.createElement("div");
       overlay.className = "gallery-overlay";
@@ -46,11 +61,13 @@ async function createGallery() {
       locationEl.textContent = photo.location || "";
 
       left.appendChild(titleEl);
-      left.appendChild(locationEl);
+      if (photo.location) {
+        left.appendChild(locationEl);
+      }
 
       const tag = document.createElement("div");
       tag.className = "gallery-tag";
-      tag.textContent = "Serie";
+      tag.textContent = photo.tag || "Serie";
 
       overlayInner.appendChild(left);
       overlayInner.appendChild(tag);
@@ -61,10 +78,13 @@ async function createGallery() {
       gallery.appendChild(figure);
     });
 
+    // después de crear, aplicamos animación y lightbox
     setupReveal();
     setupLightbox();
   } catch (err) {
     console.error("Error cargando photos.json:", err);
+    gallery.innerHTML =
+      "<p style='color:#b00;font-size:0.9rem'>Hubo un problema al cargar la galería. Revisa que photos.json exista en la raíz y que tenga un JSON válido.</p>";
   }
 }
 
@@ -72,6 +92,11 @@ async function createGallery() {
 function setupReveal() {
   const revealEls = document.querySelectorAll(".reveal, .gallery-item");
   if (!revealEls.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    revealEls.forEach((el) => el.classList.add("visible"));
+    return;
+  }
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -92,6 +117,8 @@ function setupReveal() {
 function setupLightbox() {
   if (!lightbox) return;
   const items = document.querySelectorAll(".gallery-item");
+  if (!items.length) return;
+
   items.forEach((item) => {
     item.addEventListener("click", () => {
       const img = item.querySelector("img");
