@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería · Zoe Uriel Martínez Rosas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+
+      <div class="logo">
+        <img src="img/logo-zoe.png" alt="Logo Zoe Uriel Martínez Rosas" class="logo-mark">
+        <div>
+          <div class="logo-text-main">ZOE URIEL MARTÍNEZ ROSAS</div>
+          <div class="logo-text-sub">FOTOGRAFÍA</div>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Galería</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="testimonios.html">Testimonios</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero-center reveal">
+      <h1 class="hero-center-title">Galería</h1>
+      <p class="hero-center-subtitle">Selección de fotografías recientes.</p>
+    </section>
+
+    <section id="galeria" class="reveal">
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox-backdrop" id="lightbox">
+      <button class="lightbox-close" onclick="closeLightbox()">✕ Cerrar</button>
+      <div class="lightbox-inner">
+        <div class="lightbox-image-wrap"><img id="lightbox-img"></div>
+        <div class="lightbox-meta">
+          <div>
+            <div id="lightbox-title" class="lightbox-title"></div>
+            <div id="lightbox-location"></div>
+          </div>
+          <div id="lightbox-info"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div>© <span id="year"></span> Zoe Uriel Martínez Rosas</div>
+      <div>Portafolio fotográfico.</div>
+    </footer>
+  </main>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/522212029082" class="whatsapp-float" target="_blank"><span>WhatsApp</span></a>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>

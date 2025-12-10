@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto · Portafolio Fotográfico</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <img
+          src="img/logo-zoe.png"
+          alt="Logo Zoe Uriel Martínez Rosas"
+          class="logo-mark"
+        />
+        <div>
+          <div class="logo-text-main">ZOE URIEL MARTÍNEZ ROSAS</div>
+          <div class="logo-text-sub">FOTOGRAFÍA</div>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Galería</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="testimonios.html">Testimonios</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="page">
+    <section class="reveal">
+      <div class="section-header">
+        <div>
+          <h1 class="section-title">Contacto</h1>
+          <p class="section-subtitle">
+            Información directa para agendar sesión o resolver dudas.
+          </p>
+        </div>
+      </div>
+
+      <!-- 🔥 NUEVA SECCIÓN DE TRES COLUMNAS -->
+      <div class="two-col" style="grid-template-columns: 1fr 1fr 1fr;">
+
+        <!-- TARJETA: Tu foto personal -->
+        <article class="card" style="text-align:center;">
+          <h2 class="card-title">Sobre mí</h2>
+
+          <!-- FOTO DEL FOTÓGRAFO -->
+          <img 
+            src="img/tu-foto.jpg" 
+            alt="Foto de Zoe Uriel Martínez Rosas" 
+            style="
+                    width: 100%;
+                    max-width: 380px;
+                    border-radius: 16px;
+                    margin: 0 auto 14px;
+                    display: block;
+                    box-shadow: 0 12px 26px rgba(0,0,0,0.15);
+                    "
+          />
+
+          <p style="font-size:0.9rem; color:var(--muted); margin-top:6px;">
+            Fotógrafo especializado en retrato, pareja y eventos.  
+            Disponible en Puebla y alrededores.
+          </p>
+
+          <p style="font-size:0.85rem; margin-top:6px; color:var(--text);">
+            Me encantará capturar tus momentos.
+          </p>
+        </article>
+
+        <!-- TARJETA DE INFORMACIÓN -->
+        <article class="card">
+          <h2 class="card-title">Datos de contacto</h2>
+          <p><strong>Nombre:</strong> Zoe Uriel Martínez Rosas</p>
+          <p><strong>Ciudad:</strong> Puebla / Puebla</p>
+
+          <div style="margin-top:10px;">
+            <p><strong>Teléfono / WhatsApp:</strong></p>
+            <p>
+              <a href="https://wa.me/522212029082" target="_blank" rel="noopener">
+                +52 22 12 02 90 82
+              </a>
+            </p>
+          </div>
+
+          <div style="margin-top:10px;">
+            <p><strong>Correo electrónico:</strong></p>
+            <p>
+              <a href="mailto:zoeurielmtz@gmail.com">
+                zoeurielmtz@gmail.com
+              </a>
+            </p>
+          </div>
+
+          <div style="margin-top:10px;">
+            <p><strong>Instagram:</strong></p>
+            <p><a href="https://instagram.com/tuusuario" target="_blank">@tuusuario</a></p>
+          </div>
+
+        </article>
+
+        <!-- FORMULARIO GOOGLE FORMS -->
+        <aside class="card">
+          <h2 class="card-title">Escríbeme</h2>
+          <p class="form-footnote" style="margin-bottom:8px;">
+            Completa el formulario y revisaré tu mensaje lo antes posible.
+          </p>
+
+          <div style="width: 100%; overflow: hidden; border-radius: 12px;">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdk5qJGS6g7EACam8xIWuGaLszmFNgoKHq5w9psC64nVF4geQ/viewform?embedded=true"
+              width="100%"
+              height="824"
+              frameborder="0"
+              marginheight="0"
+              marginwidth="0"
+              style="border-radius: 10px;"
+            >
+              Cargando…
+            </iframe>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>© <span id="year"></span> · Zoe Uriel Martínez Rosas</div>
+      <div>Portafolio fotográfico.</div>
+    </footer>
+  </main>
+
+  <!-- WHATSAPP BOTÓN -->
+  <a
+    href="https://wa.me/522212029082"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+  >
+    <span>WhatsApp</span>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
