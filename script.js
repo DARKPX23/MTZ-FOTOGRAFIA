@@ -40,7 +40,8 @@ async function createGallery() {
       figure.dataset.info = photo.info || "";
 
       const img = document.createElement("img");
-      img.src = `img/${photo.file}`;
+      // 🔥 anti-caché: fuerza a cargar siempre la versión más nueva
+      img.src = `img/${photo.file}?v=${Date.now()}`;
       img.alt = photo.title || `Foto ${index + 1}`;
       img.loading = "lazy";
 
