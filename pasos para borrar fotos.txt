@@ -1,0 +1,9 @@
+🔥 Entonces, ¿qué necesito usar al borrar fotos?
+✔ Paso 1: Borrar la foto
+✔ Paso 2: Ejecutar:
+npm run update
+
+✔ Paso 3: Subir los cambios:
+git add .
+git commit -m "Actualizo galería"
+git push
