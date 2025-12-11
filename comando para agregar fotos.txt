@@ -1,0 +1,3 @@
+npm run update
+
+meter ese comando a la terminal cada que agregue fotos.
