@@ -15,7 +15,7 @@ async function createGallery() {
   if (!gallery) return;
 
   try {
-    const response = await fetch("photos.json");
+    const response = await fetch(`photos.json?v=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) {
       throw new Error("No se pudo cargar photos.json");
     }
