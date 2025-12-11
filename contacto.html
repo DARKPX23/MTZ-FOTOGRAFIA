@@ -48,41 +48,12 @@
         <div>
           <h1 class="section-title">Contacto</h1>
           <p class="section-subtitle">
-            Información directa para agendar sesión o resolver dudas.
+            Agenda tu sesión o resuelve cualquier duda.
           </p>
         </div>
       </div>
 
-      <!-- 🔥 NUEVA SECCIÓN DE TRES COLUMNAS -->
-      <div class="two-col" style="grid-template-columns: 1fr 1fr 1fr;">
-
-        <!-- TARJETA: Tu foto personal -->
-        <article class="card" style="text-align:center;">
-          <h2 class="card-title">Sobre mí</h2>
-
-          <!-- FOTO DEL FOTÓGRAFO -->
-          <img 
-            src="img/tu-foto.jpg" 
-            alt="Foto de Zoe Uriel Martínez Rosas" 
-            style="
-                    width: 100%;
-                    max-width: 380px;
-                    border-radius: 16px;
-                    margin: 0 auto 14px;
-                    display: block;
-                    box-shadow: 0 12px 26px rgba(0,0,0,0.15);
-                    "
-          />
-
-          <p style="font-size:0.9rem; color:var(--muted); margin-top:6px;">
-            Fotógrafo especializado en retrato, pareja y eventos.  
-            Disponible en Puebla y alrededores.
-          </p>
-
-          <p style="font-size:0.85rem; margin-top:6px; color:var(--text);">
-            Me encantará capturar tus momentos.
-          </p>
-        </article>
+      <div class="two-col">
 
         <!-- TARJETA DE INFORMACIÓN -->
         <article class="card">
@@ -113,29 +84,64 @@
             <p><a href="https://instagram.com/tuusuario" target="_blank">@tuusuario</a></p>
           </div>
 
+          <div style="margin-top:16px;">
+            <p><strong>Foto:</strong></p>
+            <img src="img/bodazoe.jpg" alt="Zoe Uriel Martínez Rosas" style="border-radius:12px; margin-top:6px;">
+          </div>
         </article>
 
-        <!-- FORMULARIO GOOGLE FORMS -->
+        <!-- FORMULARIO → WHATSAPP -->
         <aside class="card">
-          <h2 class="card-title">Escríbeme</h2>
+          <h2 class="card-title">Escríbeme por WhatsApp</h2>
           <p class="form-footnote" style="margin-bottom:8px;">
-            Completa el formulario y revisaré tu mensaje lo antes posible.
+            Completa los datos y al enviar se abrirá WhatsApp con tu mensaje listo para enviar.
           </p>
 
-          <div style="width: 100%; overflow: hidden; border-radius: 12px;">
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSdk5qJGS6g7EACam8xIWuGaLszmFNgoKHq5w9psC64nVF4geQ/viewform?embedded=true"
-              width="100%"
-              height="824"
-              frameborder="0"
-              marginheight="0"
-              marginwidth="0"
-              style="border-radius: 10px;"
-            >
-              Cargando…
-            </iframe>
-          </div>
+          <form id="contact-form">
+            <div class="form-row">
+              <div>
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" placeholder="Nombre" />
+              </div>
 
+              <div>
+                <label for="email">Correo</label>
+                <input id="email" name="email" type="email" placeholder="correo@ejemplo.com" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel" placeholder="Número de teléfono" />
+              </div>
+              <div>
+                <label for="tipo">Tipo de sesión</label>
+                <select id="tipo" name="tipo">
+                  <option value="">Selecciona una opción</option>
+                  <option value="Boda">Boda</option>
+                  <option value="Sesión individual">Sesión individual</option>
+                  <option value="Pareja">Sesión en pareja</option>
+                  <option value="Retrato estudio">Retrato en estudio</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="fecha">Fecha aproximada</label>
+              <input id="fecha" name="fecha" type="text" placeholder="Ej. 22 de febrero, por la tarde" />
+            </div>
+
+            <div>
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="3" placeholder="Cuéntame qué tipo de sesión tienes en mente."></textarea>
+            </div>
+
+            <button class="btn-primary btn-submit" type="submit">
+              Enviar mensaje por WhatsApp
+            </button>
+          </form>
         </aside>
 
       </div>
@@ -148,7 +154,7 @@
     </footer>
   </main>
 
-  <!-- WHATSAPP BOTÓN -->
+  <!-- WHATSAPP BOTÓN FLOTANTE -->
   <a
     href="https://wa.me/522212029082"
     class="whatsapp-float"

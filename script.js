@@ -40,7 +40,7 @@ async function createGallery() {
       figure.dataset.info = photo.info || "";
 
       const img = document.createElement("img");
-      // 🔥 anti-caché: fuerza a cargar siempre la versión más nueva
+      // anti-caché para imágenes
       img.src = `img/${photo.file}?v=${Date.now()}`;
       img.alt = photo.title || `Foto ${index + 1}`;
       img.loading = "lazy";
@@ -155,14 +155,37 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// Formulario demo (si existe)
+// Formulario → WhatsApp (si existe)
 const contactForm = document.getElementById("contact-form");
 if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
-    alert(
-      "Formulario de demostración.\n\nMás adelante se puede conectar a tu correo o WhatsApp."
-    );
+
+    const nombre = this.nombre?.value || "";
+    const email = this.email?.value || "";
+    const telefono = this.telefono?.value || "";
+    const tipo = this.tipo?.value || "";
+    const fecha = this.fecha?.value || "";
+    const mensaje = this.mensaje?.value || "";
+
+    const texto = [
+      "Hola Zoe, quiero agendar una sesión:",
+      nombre && `• Nombre: ${nombre}`,
+      telefono && `• Teléfono: ${telefono}`,
+      email && `• Correo: ${email}`,
+      tipo && `• Tipo de sesión: ${tipo}`,
+      fecha && `• Fecha aproximada: ${fecha}`,
+      mensaje && `• Mensaje: ${mensaje}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const telefonoDestino = "522212029082"; // sin signos, solo números
+    const url = `https://wa.me/${telefonoDestino}?text=${encodeURIComponent(
+      texto
+    )}`;
+
+    window.open(url, "_blank");
     this.reset();
   });
 }

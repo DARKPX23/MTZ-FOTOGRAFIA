@@ -5,67 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Testimonios · Zoe Uriel Martínez Rosas</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<header class="nav">
-  <div class="nav-inner">
 
-    <div class="logo">
-      <img src="img/logo-zoe.png" alt="Logo Zoe Uriel Martínez Rosas" class="logo-mark">
-      <div>
-        <div class="logo-text-main">ZOE URIEL MARTÍNEZ ROSAS</div>
-        <div class="logo-text-sub">FOTOGRAFÍA</div>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="img/logo-zoe.png" alt="Logo Zoe Uriel Martínez Rosas" class="logo-mark">
+        <div>
+          <div class="logo-text-main">ZOE URIEL MARTÍNEZ ROSAS</div>
+          <div class="logo-text-sub">FOTOGRAFÍA</div>
+        </div>
       </div>
+
+      <nav class="nav-links">
+        <a href="index.html">Galería</a>
+        <a href="sobre-mi.html">Sobre mí</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="testimonios.html">Testimonios</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
     </div>
+  </header>
 
-    <nav class="nav-links">
-      <a href="index.html">Galería</a>
-      <a href="sobre-mi.html">Sobre mí</a>
-      <a href="servicios.html">Servicios</a>
-      <a href="testimonios.html">Testimonios</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
+  <main class="page">
+    <section class="hero-center reveal">
+      <h1 class="hero-center-title">Testimonios</h1>
+      <p class="hero-center-subtitle">
+        Algunas palabras de personas que han confiado en mi trabajo.
+      </p>
+    </section>
 
-  </div>
-</header>
-
-<main class="page">
-
-  <section class="reveal">
-    <div class="section-header">
-      <div>
-        <h1 class="section-title">Testimonios</h1>
-        <p class="section-subtitle">Opiniones de clientes.</p>
-      </div>
-    </div>
-
-    <div class="two-col">
+    <section class="reveal">
       <article class="card">
-        <p class="testimonial-quote">“La sesión fue muy tranquila y el resultado hermoso.”</p>
-        <p class="testimonial-name">— Cliente 1</p>
+        <div class="testimonial">
+          <p class="testimonial-quote">
+            “Nos hizo sentir muy tranquilos durante toda la sesión de boda.
+            Las fotos se sienten muy honestas, tal como queríamos.”
+          </p>
+          <p class="testimonial-name">Fernanda &amp; Luis · Boda</p>
+        </div>
+
+        <div class="testimonial">
+          <p class="testimonial-quote">
+            “No estoy acostumbrada a las fotos, pero la sesión fue súper ligera.
+            Me encantó el resultado, muy natural y nada posado.”
+          </p>
+          <p class="testimonial-name">Ana · Sesión individual</p>
+        </div>
+
+        <div class="testimonial">
+          <p class="testimonial-quote">
+            “Quedamos fascinados con las fotos en exterior. Tienen una luz muy bonita
+            y capturó momentos que ni siquiera habíamos notado en el momento.”
+          </p>
+          <p class="testimonial-name">Mariana &amp; Diego · Sesión en pareja</p>
+        </div>
+
+        <div class="testimonial">
+          <p class="testimonial-quote">
+            “Muy puntual, cuidadoso y atento a los detalles. Las fotos finales se ven
+            limpias, profesionales y con un estilo muy claro.”
+          </p>
+          <p class="testimonial-name">Claudia · Sesión corporativa</p>
+        </div>
       </article>
+    </section>
 
-      <article class="card">
-        <p class="testimonial-quote">“Supiste guiarnos sin hacer la sesión incómoda.”</p>
-        <p class="testimonial-name">— Cliente 2</p>
-      </article>
-    </div>
+    <footer>
+      <div>© <span id="year"></span> Zoe Uriel Martínez Rosas</div>
+      <div>Portafolio fotográfico.</div>
+    </footer>
+  </main>
 
-  </section>
+  <a
+    href="https://wa.me/522212029082"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+  >
+    <span>WhatsApp</span>
+  </a>
 
-  <footer>
-    <div>© <span id="year"></span> Zoe Uriel Martínez Rosas</div>
-    <div>Portafolio fotográfico.</div>
-  </footer>
-
-</main>
-
-<a href="https://wa.me/5210000000000" class="whatsapp-float" target="_blank"><span>WhatsApp</span></a>
-
-<script src="script.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
