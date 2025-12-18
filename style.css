@@ -222,47 +222,14 @@ img {
   transform: scale(1.05);
 }
 
-.gallery-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7),
-    transparent 60%
-  );
-  display: flex;
-  align-items: flex-end;
-  padding: 10px 10px 12px;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  font-size: 0.75rem;
-  color: #fdfdfd;
-}
-
-.gallery-item:hover .gallery-overlay {
-  opacity: 1;
-}
-
-.gallery-overlay-inner {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  gap: 8px;
-  align-items: center;
-}
-
-.gallery-overlay-title {
-  font-weight: 500;
-  font-size: 0.8rem;
-}
-
+/* ✅ GALERÍA SIN TEXTO (sin nombres ni "Serie") */
+.gallery-overlay,
+.gallery-overlay-inner,
+.gallery-overlay-title,
 .gallery-tag {
-  padding: 3px 8px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-  font-size: 0.68rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: none !important;
 }
+
 
 /* HERO (si lo usas en otras páginas) */
 
